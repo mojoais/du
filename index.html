@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101715">
+  <meta name="description" content="Your game. Your world. Discover a premium online poker experience.">
+  <title>Your Game. Your World. | Premium Online Poker</title>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
+    s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1399310622039113');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1399310622039113&ev=PageView&noscript=1"
+      alt="">
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #101715;
+      --panel: #17211e;
+      --text: #f5f3ec;
+      --muted: #b9c1bb;
+      --green: #153f32;
+      --green-bright: #24664d;
+      --red: #792d3b;
+      --line: rgba(245,243,236,.14);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(ellipse at 78% 20%, rgba(36,102,77,.22), transparent 36rem),
+        linear-gradient(145deg, #101715 0%, #111a17 54%, #0b100f 100%);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .page {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      min-height: 100vh;
+      padding: clamp(24px, 5vw, 60px);
+      display: flex;
+      flex-direction: column;
+    }
+    .topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-size: 12px;
+      font-weight: 750;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    .mark {
+      width: 30px; height: 30px;
+      border: 1px solid rgba(245,243,236,.6);
+      border-radius: 50%;
+      display: grid; place-items: center;
+      color: #d7e7dc;
+      font-size: 14px;
+    }
+    .edition {
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    main {
+      flex: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, .88fr);
+      align-items: center;
+      gap: clamp(32px, 6vw, 76px);
+      padding: clamp(42px, 8vw, 90px) 0;
+    }
+    .eyebrow {
+      margin: 0 0 18px;
+      color: #9fc4b0;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(42px, 7vw, 82px);
+      line-height: .94;
+      letter-spacing: -.065em;
+      font-weight: 760;
+      text-transform: uppercase;
+    }
+    h1 span { display: block; }
+    h1 span:last-child { color: #a9c9b5; }
+    .intro {
+      max-width: 470px;
+      margin: 24px 0 30px;
+      color: var(--muted);
+      font-size: clamp(15px, 1.5vw, 17px);
+      line-height: 1.7;
+    }
+    .benefits {
+      display: grid;
+      gap: 15px;
+      margin: 0 0 34px;
+      padding: 0;
+      list-style: none;
+    }
+    .benefits li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+    .check {
+      flex: 0 0 20px;
+      width: 20px; height: 20px;
+      display: grid; place-items: center;
+      border: 1px solid rgba(169,201,181,.5);
+      border-radius: 50%;
+      color: #a9c9b5;
+      font-size: 11px;
+    }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 13px;
+      min-height: 54px;
+      padding: 0 24px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 4px;
+      background: linear-gradient(135deg, #843646, #632632);
+      color: #fff;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      box-shadow: 0 12px 34px rgba(0,0,0,.25);
+      transition: transform .2s ease, filter .2s ease;
+    }
+    .cta:hover { transform: translateY(-2px); filter: brightness(1.12); }
+    .cta:focus-visible { outline: 3px solid #a9c9b5; outline-offset: 4px; }
+    .cta svg { width: 17px; height: 17px; }
+    .note {
+      margin: 15px 0 0;
+      color: #8f9a93;
+      font-size: 11px;
+      line-height: 1.6;
+    }
+    .visual-wrap {
+      position: relative;
+      display: grid;
+      place-items: center;
+      min-height: 420px;
+      isolation: isolate;
+    }
+    .halo {
+      position: absolute;
+      width: 90%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(48,113,81,.27), rgba(16,23,21,0) 68%);
+      z-index: -1;
+    }
+    .phone {
+      position: relative;
+      width: min(280px, 75%);
+      aspect-ratio: 9 / 18.8;
+      padding: 8px;
+      border-radius: 38px;
+      background: linear-gradient(135deg, #6f7771, #1b211f 28%, #080b0a 72%, #555e57);
+      box-shadow: 0 38px 90px rgba(0,0,0,.56), inset 0 0 0 1px rgba(255,255,255,.24);
+      transform: rotate(4deg);
+    }
+    .screen {
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+      border-radius: 31px;
+      background:
+        radial-gradient(ellipse at 80% 5%, rgba(70,132,98,.28), transparent 48%),
+        linear-gradient(180deg, #17231e, #0b100e 85%);
+      border: 1px solid rgba(255,255,255,.08);
+      padding: 22px 15px;
+    }
+    .speaker {
+      position: absolute;
+      top: 9px; left: 50%;
+      width: 72px; height: 17px;
+      transform: translateX(-50%);
+      border-radius: 20px;
+      background: #050706;
+      z-index: 2;
+    }
+    .screen-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+      color: #e7eee8;
+      font-size: 9px;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    .online { color: #9bc9a9; font-size: 8px; }
+    .table {
+      margin-top: 28px;
+      padding: 18px 10px 20px;
+      border-radius: 48% / 34%;
+      background:
+        radial-gradient(ellipse at 50% 35%, #246348 0%, #174532 48%, #0d291f 100%);
+      border: 5px solid #242c28;
+      box-shadow: inset 0 0 0 1px rgba(218,238,222,.12), 0 15px 25px rgba(0,0,0,.3);
+      text-align: center;
+    }
+    .table-label {
+      color: #d5e5d8;
+      font-size: 8px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    .pot {
+      margin: 12px 0 17px;
+      color: #f2f0e8;
+      font-size: 11px;
+      font-weight: 650;
+    }
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+    }
+    .playing-card {
+      width: 35px;
+      height: 49px;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 4px;
+      background: #f5f1e8;
+      color: #171a18;
+      box-shadow: 0 4px 8px rgba(0,0,0,.25);
+      font-family: Georgia, serif;
+      font-size: 12px;
+      text-align: left;
+    }
+    .playing-card.red { color: #a3303f; }
+    .playing-card .suit { align-self: flex-end; font-size: 16px; line-height: 1; }
+    .chips {
+      display: flex;
+      justify-content: center;
+      margin-top: 19px;
+    }
+    .chip {
+      width: 26px; height: 26px;
+      margin-left: -4px;
+      border-radius: 50%;
+      border: 4px dashed #d4d8ce;
+      background: #26312b;
+      box-shadow: 0 3px 5px rgba(0,0,0,.25);
+    }
+    .chip:nth-child(2) { background: #792d3b; }
+    .chip:nth-child(3) { background: #c7c7b7; }
+    .table-footer {
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      color: #d3dfd5;
+      font-size: 8px;
+    }
+    .screen-action {
+      margin-top: 20px;
+      display: block;
+      padding: 11px 8px;
+      border-radius: 5px;
+      background: #793342;
+      color: #fff;
+      text-align: center;
+      font-size: 8px;
+      font-weight: 800;
+      letter-spacing: .13em;
+    }
+    .phone-caption {
+      margin-top: 20px;
+      text-align: center;
+      color: rgba(238,242,236,.55);
+      font-size: 8px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .float-card {
+      position: absolute;
+      width: 74px;
+      height: 104px;
+      padding: 8px;
+      border-radius: 7px;
+      background: linear-gradient(145deg, #fbf8ef, #d9d8cd);
+      color: #1a201c;
+      box-shadow: 0 18px 35px rgba(0,0,0,.32);
+      font-family: Georgia, serif;
+      transform: rotate(-13deg);
+    }
+    .float-card .rank { font-size: 23px; line-height: 1; }
+    .float-card .suit { margin-top: 22px; font-size: 34px; text-align: center; }
+    .float-card.one { left: 2%; bottom: 15%; }
+    .float-card.two {
+      right: 0;
+      top: 16%;
+      transform: rotate(12deg) scale(.82);
+      color: #9d2939;
+    }
+    .surface {
+      position: absolute;
+      bottom: 8%;
+      left: 5%;
+      right: 2%;
+      height: 17%;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(0,0,0,.6), transparent 70%);
+      filter: blur(12px);
+      z-index: -1;
+    }
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      border-top: 1px solid var(--line);
+      padding-top: 20px;
+      color: #8f9a93;
+      font-size: 10px;
+      line-height: 1.6;
+    }
+    @media (max-width: 760px) {
+      .page { padding: 23px 22px 26px; }
+      .topline { padding-bottom: 20px; }
+      .edition { max-width: 120px; text-align: right; line-height: 1.5; }
+      main {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 46px 0 38px;
+      }
+      .copy { order: 1; }
+      .visual-wrap { order: 2; min-height: 370px; }
+      h1 { font-size: clamp(46px, 12vw, 68px); }
+      .intro { margin-top: 19px; }
+      .benefits { gap: 13px; }
+      .phone { width: min(230px, 62%); }
+      .float-card.one { left: 8%; bottom: 14%; }
+      .float-card.two { right: 7%; top: 12%; }
+      footer { flex-direction: column; gap: 5px; }
+    }
+    @media (max-width: 380px) {
+      .page { padding-left: 17px; padding-right: 17px; }
+      .brand { font-size: 10px; letter-spacing: .12em; }
+      .visual-wrap { min-height: 330px; }
+      .phone { width: 62%; padding: 6px; border-radius: 30px; }
+      .screen { border-radius: 24px; padding: 18px 11px; }
+      .float-card { width: 60px; height: 85px; }
+      .float-card .rank { font-size: 19px; }
+      .float-card .suit { margin-top: 17px; font-size: 28px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topline">
+      <div class="brand"><span class="mark" aria-hidden="true">♠</span> Premium Online Poker</div>
+      <div class="edition">Dubai · Mobile Experience</div>
+    </header>
+
+    <main>
+      <section class="copy" aria-labelledby="hero-title">
+        <p class="eyebrow">A modern poker experience</p>
+        <h1 id="hero-title"><span>Your Game.</span><span>Your World.</span></h1>
+        <p class="intro">A refined online poker experience, designed to fit the way you play.</p>
+        <ul class="benefits">
+          <li><span class="check" aria-hidden="true">✓</span><span>Poker on Mobile</span></li>
+          <li><span class="check" aria-hidden="true">✓</span><span>A Clear, Intuitive Interface</span></li>
+          <li><span class="check" aria-hidden="true">✓</span><span>Access Your Game Online</span></li>
+        </ul>
+        <a class="cta" id="telegram-cta"
+           href="https://t.me/+79kwBGM9VX9hYzVi"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Explore the app on Telegram">
+          EXPLORE THE APP
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 12h13M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <p class="note">For adults only. Please check local laws and eligibility before participating.</p>
+      </section>
+
+      <section class="visual-wrap" aria-label="Illustrative premium poker interface on a smartphone">
+        <div class="halo"></div>
+        <div class="surface"></div>
+        <div class="float-card one" aria-hidden="true"><div class="rank">A</div><div class="suit">♠</div></div>
+        <div class="float-card two" aria-hidden="true"><div class="rank">K</div><div class="suit">♥</div></div>
+        <div class="phone">
+          <div class="screen">
+            <div class="speaker"></div>
+            <div class="screen-head"><span>POKER ROOM</span><span class="online">● ONLINE</span></div>
+            <div class="table">
+              <div class="table-label">Premium Table</div>
+              <div class="pot">YOUR NEXT HAND</div>
+              <div class="cards" aria-label="Illustrative playing cards">
+                <div class="playing-card"><span>A</span><span class="suit">♠</span></div>
+                <div class="playing-card red"><span>K</span><span class="suit">♥</span></div>
+                <div class="playing-card"><span>Q</span><span class="suit">♣</span></div>
+              </div>
+              <div class="chips" aria-hidden="true"><span class="chip"></span><span class="chip"></span><span class="chip"></span></div>
+              <div class="table-footer"><span>YOUR TABLE</span><span>READY TO PLAY</span></div>
+            </div>
+            <div class="screen-action">EXPLORE POKER</div>
+            <div class="phone-caption">Your game · Your world</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>YOUR GAME. YOUR WORLD.</span>
+      <span>Play responsibly. Availability depends on local laws.</span>
+    </footer>
+  </div>
+
+  <script>
+    // Track CTA clicks in Meta Pixel. This event fires before the browser follows the Telegram link.
+    document.getElementById('telegram-cta').addEventListener('click', function () {
+      if (typeof window.fbq === 'function') {
+        window.fbq('track', 'Lead', { content_name: 'Explore the App - Telegram' });
+      }
+    });
+  </script>
+</body>
+</html>
